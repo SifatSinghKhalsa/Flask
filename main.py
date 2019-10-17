@@ -1,0 +1,24 @@
+from flask import Flask,render_template
+
+app = Flask(__name__)
+
+
+@app.route('/')
+def index():
+    return render_template('basic.html')
+@app.route('/student_portal')
+def info():
+    return render_template('student.html')
+@app.route('/student/<name>')
+def data(name):
+    return "<h1> {} can use this personalized portal. </h1>".format(name)
+@app.route('/employee_portal')
+def rec():
+    return "<h1> Employee recieve data over here </h1>"
+
+@app.route('/thank')
+def thanks():
+    return render_template('thank.html')
+
+if __name__== '__main__':
+    app.run(debug=True) 
