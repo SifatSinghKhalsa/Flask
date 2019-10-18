@@ -17,7 +17,7 @@ def login():
 
 @app.route('/student_portal')
 def info():
-    return render_template('student.html')
+    return render_template('add_feedback.html', payload={})
 
 
 @app.route('/student/<name>')
