@@ -1,17 +1,30 @@
-from flask import Flask,render_template
+from flask import Flask,render_template, request
 
 app = Flask(__name__)
 
 
-@app.route('/')
-def index():
-    return render_template('basic.html')
+@app.route('/', methods=["GET", "POST"])
+def login():
+    error = ""
+
+    if request.method == "POST":
+        if request.form['username'] == "sifat" and request.form['password'] == "khalsa":
+            return "Access Granted"
+        else:
+            error = "Invalid Username/Password"
+
+    return render_template('login.html', error = error)
+
 @app.route('/student_portal')
 def info():
     return render_template('student.html')
+
+
 @app.route('/student/<name>')
 def data(name):
     return "<h1> {} can use this personalized portal. </h1>".format(name)
+
+
 @app.route('/employee_portal')
 def rec():
     return "<h1> Employee recieve data over here </h1>"

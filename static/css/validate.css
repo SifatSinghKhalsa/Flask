@@ -1,0 +1,155 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:600&display=swap');
+
+#image-container {
+    position: relative;
+    width: 100%;
+}
+
+#dropdown {
+  background-color: transparent;
+  width: 100%;
+  border-color: transparent;
+}
+
+#dropdown-title, #dropdown-title-hidden {
+  cursor: pointer;
+}
+
+h4.card-title {
+  display: inline-block;
+  /* font-family: "Open Sans", sans-serif; */
+  float: left;
+}
+
+#card-title {
+  color: black;
+  margin-bottom: 0;
+  padding-top: 0.5em;
+  padding-bottom: 0.5em;
+}
+
+.dropdown-button {
+  float: right;
+}
+
+#dropdown-container {
+  background-color: #dddce1;
+  position: relative;
+  display: block;
+}
+
+#dropdown-content-hidden, #dropdown-content-hidden2, #dropdown-content-hidden3, #dropdown-content-hidden4 {
+  display: none;
+}
+
+#review-card, #review-card-hidden, #review-card-hidden2, #review-card-hidden3, #review-card-hidden4, #review-card-disabled {
+  margin-bottom: 1em;
+  border-radius: 10px;
+}
+
+#review-card-hidden, #review-card-hidden2, #review-card-hidden3, #review-card-hidden4{ 
+  background-color: #c3cad5;
+  color: black;
+}
+
+.expand-icon {
+  position: absolute;
+  top: 20px;
+  right: 38px;
+  background-color: #282f3a;
+  font-size: 2.3em;
+  font-weight: bold;
+  transition: 0.3s;
+  cursor: pointer;
+  border-radius: 0.1875rem;
+  width: 0.8em;
+  text-align: center;
+  padding: 0.1em;
+}
+
+/* The Image background when expanded */
+.modal-validate {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  padding-top: 100px; /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.9); /* Black w/ opacity */
+  z-index: 20;
+}
+
+/* Modal Content (image) */
+.modal-validate-content {
+  margin: auto;
+  display: block;
+  width: 50%;
+  /* max-width: 700px; */
+}
+
+/* Animation */
+.modal-validate-content {  
+  -webkit-animation-name: zoom;
+  -webkit-animation-duration: 0.6s;
+  animation-name: zoom;
+  animation-duration: 0.6s;
+}
+
+@-webkit-keyframes zoom {
+  from {-webkit-transform:scale(0)} 
+  to {-webkit-transform:scale(1)}
+}
+
+@keyframes zoom {
+  from {transform:scale(0)} 
+  to {transform:scale(1)}
+}
+
+.rotate, .zoom-in, .zoom-out {
+  position: absolute;
+  top: 0.5em;
+  color: #f1f1f1;
+  font-size: 40px;
+  font-weight: bold;
+  transition: 0.3s;
+  width: 0.6em;
+  cursor: pointer;
+  left: 50%;
+}
+
+.rotate {
+  margin-left: 1em;
+}
+
+.zoom-in {
+  margin-left: -1em;
+}
+
+/* The Close Button */
+.close {
+  position: absolute;
+  top: 15px;
+  right: 35px;
+  color: #f1f1f1;
+  font-size: 40px;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.close:hover,
+.close:focus {
+  color: #bbb;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/* 100% Image Width on All Screens */
+@media only screen and (max-width: 700px){
+  .modal-content {
+    width: 100%;
+  }
+}

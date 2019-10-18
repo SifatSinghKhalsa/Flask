@@ -1,0 +1,11 @@
+<svg width="24.000000000000004" height="24.000000000000004" xmlns="http://www.w3.org/2000/svg">
+
+ <g>
+  <title>background</title>
+  <rect fill="none" id="canvas_background" height="402" width="582" y="-1" x="-1"/>
+ </g>
+ <g>
+  <title>Layer 1</title>
+  <path fill="#bbbbbb" id="svg_1" d="m16.32,14.936809l5.39,5.4a1,1 0 0 1 -1.42,1.4l-5.38,-5.38a8,8 0 1 1 1.41,-1.41l0,-0.01zm-6.32,1.1a6,6 0 1 0 0,-12a6,6 0 0 0 0,12zm1,-7l2,0a1,1 0 0 1 0,2l-2,0l0,2a1,1 0 0 1 -2,0l0,-2l-2,0a1,1 0 0 1 0,-2l2,0l0,-2a1,1 0 1 1 2,0l0,2z" class="heroicon-ui"/>
+ </g>
+</svg>
