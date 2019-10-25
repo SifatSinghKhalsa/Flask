@@ -9,7 +9,7 @@ def login():
 
     if request.method == "POST":
         if request.form['username'] == "sifat" and request.form['password'] == "khalsa":
-            return "Access Granted"
+            return render_template('add_feedback.html', payload={})
         else:
             error = "Invalid Username/Password"
 
