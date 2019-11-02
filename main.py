@@ -29,6 +29,17 @@ def home():
     average_sentiment = round(sentiment/count,2)
     return render_template('index.html', sentiment=average_sentiment, positive=positive,negative=negative,count=count, list_reviews=db[1:], posper = round(positive/count * 100, 2), negper =  round(negative/count*100, 2))
 
+@app.route('/add', methods=["GET", "POST"])
+def login():
+    error = ""
+
+    if request.method == "POST":
+        line = f"123123, {request.form['name']}, {request.form['regno']}, {request.form['faculty']}, {request.form['subject']}, {request.form['feedback']}\n"
+        a = open("reviews.csv", "a")
+        a.write(line)
+        a.close()
+
+    return render_template('add_feedback.html', error = error, payload={})
 
 if __name__== '__main__':
     app.run(debug=True) 

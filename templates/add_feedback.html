@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-147142692-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+        gtag('js', new Date());
+        gtag('config', 'UA-147142692-1');
+    </script>
+
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Add Feedback</title>
+    <link rel="stylesheet" href="/static/vendors/ti-icons/css/themify-icons.css">
+    <link rel="stylesheet" href="/static/vendors/base/vendor.bundle.base.css">
+    <link rel="stylesheet" href="/static/css/style.css">
+    <link rel="stylesheet" href="/static/css/validate.css">
+    <link rel="shortcut icon" href="/static/images/favicon.png">
+</head>
+
+
+<body class="sidebar-icon-only">
+
+    {% include "navigation/user-nav.html" %}
+
+    <div class="container-scroller">
+        <!-- partial:partials/_navbar.html -->
+        <!-- partial -->
+        <div class="container-fluid page-body-wrapper">
+            <!-- partial:partials/_sidebar.html -->
+
+            {% include "navigation/side-nav.html" %}
+
+            <!-- partial -->
+            <div class="main-panel">
+                <font size="5" color="black" style="text-align:center;"><b>{{message}}</b></font>
+
+                <form class="forms-sample" method="POST">
+
+                    <div class="content-wrapper">
+                        <div class="row">
+                            <div class="col-md-12 grid-margin stretch-card" id="dropdown-container">
+                                <font size="3" color="red" style="text-align:center;"><b>{{error}}</b></font>
+                                <div class="card" id="review-card">
+                                    <div class="card-body" id="dropdown-title">
+                                        <button id="dropdown">
+                                                        <h4 class="card-title" id="card-title">Teacher Feedback for Mr Arvind</h4>
+                                                        <span>
+                                                            <img class="dropdown-button"
+                                                                src="/static/images/dropdown.svg"></img>
+                                                        </span>
+                                                    </button>
+                                        <div id="dropdown-content">
+                                            <div class="form-group row">
+                                                <label for="name" class="col-sm-3 col-form-label">Name</label>
+                                                <div class="col-sm-9">
+                                                    <input type="text" name="name" class="form-control" id="name" value="" required>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div id="dropdown-content">
+                                            <div class="form-group row">
+                                                <label for="regno" class="col-sm-3 col-form-label">Reg Number</label>
+                                                <div class="col-sm-9">
+                                                    <input type="text" name="regno" class="form-control" id="regno" value="" required>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div id="dropdown-content">
+                                            <div class="form-group row">
+                                                <label for="faculty" class="col-sm-3 col-form-label">Name of Faculty</label>
+                                                <div class="col-sm-9">
+                                                    <select id="faculty" name="faculty" class="col-sm-9">
+                                                        <option value="Dr. Arvind">Dr. Arvind</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div id="dropdown-content">
+                                            <div class="form-group row">
+                                                <label for="subject" class="col-sm-3 col-form-label">Subject</label>
+                                                <div class="col-sm-9" class="form-control">
+                                                    <select id="subject" name="subject" class="col-sm-9">
+                                                            <option value="Computer Architecture">Computer Architecture</option>
+                                                        </select>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div id="dropdown-content">
+                                            <div class="form-group row">
+                                                <label for="feedback" class="col-sm-3 col-form-label">Feedback</label>
+                                                <div class="col-sm-9">
+                                                    <input type="text" name="feedback" class="form-control" id="feedback" value="" required>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                    </div>
+
+                                    <button type="submit" class="btn btn-primary mr-2">Submit</button>
+                                    <button class="btn btn-light">Cancel</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <!-- main-panel ends -->
+        </div>
+        <!-- page-body-wrapper ends -->
+        <div id="myModal" class="modal-validate">
+            <span>
+            <img class="rotate" src="/static/images/rotate.svg"></img>
+        </span>
+            <span>
+            <img class="zoom-in" src="/static/images/zoom-in.svg"></img>
+        </span>
+            <span>
+            <img class="zoom-out" src="/static/images/zoom-out.svg"></img>
+        </span>
+            <span class="close">&times;</span>
+            <img class="modal-validate-content" id="image">
+        </div>
+    </div>
+    <!-- container-scroller -->
+    <!-- The Modal -->
+
+    <script src="/static/vendors/base/vendor.bundle.base.js"></script>
+    <script src="/static/vendors/chart.js/Chart.min.js"></script>
+    <script src="/static/js/off-canvas.js"></script>
+    <script src="/static/js/hoverable-collapse.js"></script>
+    <script src="/static/js/template.js"></script>
+    <script src="/static/js/todolist.js"></script>
+    <script src="/static/js/dashboard.js"></script>
+    <script src="/static/js/expand-image.js"></script>
+    <script src="/static/js/dropdown.js"></script>
+</body>
+
+</html>
